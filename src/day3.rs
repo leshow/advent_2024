@@ -53,7 +53,6 @@ pub fn run_2(input: &str) -> u32 {
 
     while let Ok((rest, result)) = parse_two(input) {
         input = rest;
-
         match result {
             Either::Left(n) if doit => acc += n,
             Either::Right(d) => doit = d,
@@ -71,7 +70,6 @@ mod tests {
     fn test() {
         assert_eq!(run(include_str!("../data/day3/a.txt")), 156_388_521);
     }
-
     #[test]
     fn test_2() {
         assert_eq!(run_2(include_str!("../data/day3/a.txt")), 75920122);
