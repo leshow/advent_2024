@@ -1,5 +1,3 @@
-use anyhow::Result;
-
 const DIRECTION: [(isize, isize); 8] = [
     (-1, 0),
     (-1, 1),
